@@ -9,6 +9,16 @@
         "storage",
         "unlimitedStorage"
     ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://news.yahoo.co.jp/pickup/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
     "action": {
         "default_popup": "popup.html",
         "default_icon": "icon1.png"
