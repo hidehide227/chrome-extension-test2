@@ -7,9 +7,11 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "localhost に対して Chrome を起動する",
-            "url": "http://www.yahoo.co.jp/",
-            "webRoot": "${workspaceFolder}"
+            "name": "Launch Chrome",
+            "url": "https://www.yahoo.co.jp/",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}"
+            ]
         }
     ]
 }
