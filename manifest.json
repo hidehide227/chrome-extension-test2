@@ -1,22 +1,24 @@
 {
-    "name": "Chrome Extension Test2",
-    "description": "Chrome Extension Test2",
-    "version": "1.0",
-    "manifest_version": 3,
-    "permissions": [
-        "activeTab",
-        "scripting",
-        "storage",
-        "unlimitedStorage"
-    ],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://www.yahoo.co.jp/"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
-    ]
+  "name": "Chrome Extension Test2",
+  "description": "Chrome Extension Test2",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js",
+        "utils.js"
+      ]
+    }
+  ]
 }
